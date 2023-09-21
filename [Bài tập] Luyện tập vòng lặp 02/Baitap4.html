@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function draw(num) {
+        let result = "";
+        for (let i = 0; i < num; i++) {
+          result += "*";
+        }
+        return result;
+      }
+
+      // In tam giác vuông ở góc trên bên trái
+      document.write("Tam giác vuông ở góc trên bên trái:<br>");
+      for (let i = 1; i <= 5; i++) {
+        document.write(draw(i) + "<br>");
+      }
+
+      // In tam giác vuông ở góc trên bên phải
+      document.write("<br>Tam giác vuông ở góc trên bên phải:<br>");
+      for (let i = 1; i <= 5; i++) {
+        let line = "";
+        for (let j = 1; j <= 5 - i; j++) {
+          line += "&nbsp;&nbsp;";
+        }
+        for (let j = 1; j <= i; j++) {
+          line += "*";
+        }
+        document.write(line + "<br>");
+      }
+
+      // In tam giác vuông ở góc dưới bên trái
+      document.write("<br>Tam giác vuông ở góc dưới bên trái:<br>");
+      for (let i = 5; i >= 1; i--) {
+        document.write(draw(i) + "<br>");
+      }
+
+      // In tam giác vuông ở góc dưới bên phải
+      document.write("<br>Tam giác vuông ở góc dưới bên phải:<br>");
+      for (let i = 5; i >= 1; i--) {
+        let line = "";
+        for (let j = 1; j <= 5 - i; j++) {
+          line += "&nbsp;&nbsp;";
+        }
+        for (let j = 1; j <= i; j++) {
+          line += "*";
+        }
+        document.write(line + "<br>");
+      }
+    </script>
+  </body>
+</html>

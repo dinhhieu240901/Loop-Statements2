@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" onclick="playGame()" value="Chơi" />
+    <script>
+      function playGame() {
+        // let range = parseInt(prompt("Nhập khoảng số"));
+        // let random = Math.floor(Math.random() * range);
+        // for (let index = 0; index < 3; index++) {
+        //   let guess = parseInt(prompt("Hãy đoán số:"));
+        //   if (guess == random) {
+        //     alert("Bạn đoán đúng rồi");
+        //     break;
+        //   } else if (guess > random) {
+        //     alert("Số bạn vừa nhập lớn hơn");
+        //   } else {
+        //     alert("Số bạn vừa nhập nhỏ hơn");
+        //   }
+        // }
+        //   }
+        // }
+        // let range = parseInt(prompt("Nhập khoảng số"));
+        // let random = Math.floor(Math.random() * range);
+        // let index = 0;
+        // while (index < 3) {
+        //   let guess = parseInt(prompt("Hãy đoán số:"));
+        //   if (guess == random) {
+        //     alert("Bạn đoán đúng rồi");
+        //     break;
+        //   } else if (guess > random) {
+        //     alert("Số bạn vừa nhập lớn hơn");
+        //   } else {
+        //     alert("Số bạn vừa nhập nhỏ hơn");
+        //   }
+        //   index++;
+        // }
+        let inputNum = +prompt("Nhập một số:");
+        let randomNum = Math.floor(Math.random() * (inputNum + 1));
+        let guessNum = +prompt("Đoán một số:");
+        let count = 1;
+
+        if (randomNum === guessNum) {
+          alert("Xin chúc mừng");
+        } else {
+          while (guessNum !== randomNum) {
+            count++;
+            if (guessNum > randomNum) {
+              alert("Số bạn vừa nhập lớn hơn.");
+            } else {
+              alert("Số bạn vừa nhập nhỏ hơn.");
+            }
+            guessNum = +prompt("Nhập một số khác:");
+            if (count >= 3) {
+              alert(
+                "Bạn đã đoán quá số lần cho phép. Số đúng là " + randomNum + "."
+              );
+              break;
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

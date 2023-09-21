@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let sum = 0;
+      let count = 0;
+      let number = 1;
+      let dayso = " ";
+
+      //   while (count < 30) {
+      //     if (number % 7 === 0) {
+      //       sum += number;   
+      //       count++;
+      //     }
+      //     number++;
+      //   }
+
+      //   document.write("Tổng của 30 số chia hết cho 7 đầu tiên là: " + sum);
+      for (let i = 0; count < 30; i++) {
+        if (number % 7 === 0) {
+          sum += number;
+          dayso += i + " ";
+          count++;
+        }
+        number++;
+      }
+      document.write(dayso + "<br>");
+      document.write("Tổng của 30 số chia hết cho 7 đầu tiên là: " + sum);
+    </script>
+  </body>
+</html>

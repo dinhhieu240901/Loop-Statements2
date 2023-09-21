@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let temp = parseInt(prompt("Nhập nhiệt độ"));
+
+      //   while (temp > 100 || temp < 20) {
+      //     if (temp > 100) {
+      //       alert("Giảm nhiệt độ.");
+      //     } else {
+      //       alert("Tăng nhiệt độ.");
+      //     }
+      //     temp = parseInt(prompt("Nhập nhiệt độ"));
+      //   }
+      //   alert("Nhiệt độ ổn định.");
+      let temp;
+
+      do {
+        temp = parseInt(prompt("Nhập nhiệt độ:"));
+
+        if (isNaN(temp)) {
+          alert("Ký tự bạn nhập không phải là số");
+        } else if (temp > 100) {
+          alert("Nhiệt độ quá cao. Hãy giảm nhiệt độ!");
+        } else if (temp < 20) {
+          alert("Nhiệt độ quá thấp. Hãy tăng nhiệt độ!");
+        }
+      } while (isNaN(temp) || temp > 100 || temp < 20);
+      alert("Nhiệt độ ổn định.");
+    </script>
+  </body>
+</html>
